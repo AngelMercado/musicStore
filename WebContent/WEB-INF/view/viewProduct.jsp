@@ -13,7 +13,7 @@
 						<div class="col-md-5">
 							<h3>${product.productName}</h3>
 							<p>${product.productDescription}</p>
-							<p><strong>Manufacturer</strong>${product.productManifacturer}</p>
+							<p><strong>Manufacturer</strong>${product.productNameFacturer}</p>
 							<p><strong>Category</strong>${product.productCategory}</p>
 							<p>${product.productCondition}</p>
 							<h4>${product.productPrice} USD</h4>
