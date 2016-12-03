@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Product {
@@ -15,6 +18,11 @@ public class Product {
 	private String productDescription;
 	private double productPrice;
 	private String productCondition;
+	private String productStatus;
+	private int unitInStock;
+	private String productNameFacturer;
+	@Transient
+	private MultipartFile productImage;
 	public int getProductId() {
 		return productId;
 	}
@@ -69,8 +77,12 @@ public class Product {
 	public void setProductNameFacturer(String productNameFacturer) {
 		this.productNameFacturer = productNameFacturer;
 	}
-	private String productStatus;
-	private int unitInStock;
-	private String productNameFacturer;
+	public MultipartFile getProductImage() {
+		return productImage;
+	}
+	public void setProductImage(MultipartFile productImage) {
+		this.productImage = productImage;
+	}
+	
 	
 }
