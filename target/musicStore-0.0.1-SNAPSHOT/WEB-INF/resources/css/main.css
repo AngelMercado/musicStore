@@ -1,0 +1,17 @@
+.table{
+	table-layout:fixed;
+	overflow: auto;
+}
+
+.table th{
+	text-aling: center;
+	
+}
+
+.table td{
+	text-aling:center;
+	background:whitesmoke;
+	display:block;
+	overflow: hidden;
+	text-overflow: ellipsis; 
+}

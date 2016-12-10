@@ -73,7 +73,7 @@ public class HomeController {
 		System.out.println(productImage.getOriginalFilename());
 		productDao.addProduct(product);
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		path = Paths.get(rootDirectory+"\\WEB-INF\\resources\\images" +product.getProductId()+".png");
+		path = Paths.get(rootDirectory+"\\WEB-INF\\resources\\images\\" +product.getProductId()+".png");
 		System.out.println(path);
 		if(productImage!=null && !productImage.isEmpty()){
 			try {
@@ -91,7 +91,9 @@ public class HomeController {
 		return "redirect:/admin/productInventory";
 	}
 	@RequestMapping("admin/productInventory/deleteProduct/{id}")
-	public String deleteProduct(@PathVariable int id,Model model){
+	public String deleteProduct(@PathVariable int id,Model model,HttpServletRequest request){
+		path = Paths.get(rootDirectory+"\\WEB-INF\\resources\\images\\" +id+".png");
+		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
 		productDao.deleteProduct(id);
 		return "redirect:/admin/productInventory";
 	}
