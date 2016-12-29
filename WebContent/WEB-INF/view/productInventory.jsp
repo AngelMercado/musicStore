@@ -26,9 +26,15 @@
 						<td>${product.productPrice}</td>
 						<td><a
 							href='<c:url value="/productList/viewProduct/${product.productId}"></c:url>'><span
-								class="glyphicon glyphicon-info-sign"></span></a> <a
+								class="glyphicon glyphicon-info-sign"></span></a> 
+								<a
 							href='<c:url value="/admin/productInventory/deleteProduct/${product.productId}"></c:url>'><span
-								class="glyphicon glyphicon-remove"></span></a></td>
+								class="glyphicon glyphicon-remove"></span></a>
+								<a href="<c:url value="/admin/productInventory/editProduct/${product.productId}"/>">
+									<span class="glyphicon-pencil"></span>
+								</a>
+								</td>
+								
 
 					</tr>
 				</c:forEach>

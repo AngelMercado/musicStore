@@ -1,17 +1,19 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@include file="/WEB-INF/view/templates/header.jsp"%>
-<div class="container-wrapper">
+<div class="wrapper">
 	<div class="container">
+		<div class="row">
 			<div class="page-header">
-				<h1 >Add Product</h1>
-				<p class="lead">Fill the below information to add product:</p>
+				<h1 class="lead	">Please update product information here: </h1>
+				<p>Fill the below information to add product:</p>
 			</div>
 			<form:form
-				action="${pageContext.request.contextPath}/admin/productInventory/addProduct"
+				action="${pageContext.request.contextPath}/admin/productInventory/editProduct"
 				method="post" commandName="product" enctype="multipart/form-data">
+				<form:hidden path="productId" value="${product.productId}"/>
 				<div class="form-group">
 					<label for="name">Name</label>
-					<form:input path="productName" id="name" class="form-Control" />
+					<form:input path="productName" id="name" class="form-Control" value="${product.productName}"/>
 				</div>
 				<div class="form-group">
 					<label for="category">Category</label> <label
@@ -27,11 +29,11 @@
 				<div class="form-group">
 					<label for="description">Description</label>
 					<form:textarea path="productDescription" id="description"
-						class="form-Control" />
+						class="form-Control" value="${product.productDescription}"/>
 				</div>
 				<div class="form-group">
 					<label for="price">Price</label>
-					<form:input path="productPrice" id="price" class="form-Control" />
+					<form:input path="productPrice" id="price" class="form-Control" value="${product.productPrice}"/>
 				</div>
 				<div class="form-group">
 					<label for="condition">Condition</label> <label
@@ -42,7 +44,7 @@
 				</div>
 				<div class="form-group">
 					<label for="unitInStock">Unit In Stock</label>
-					<form:input path="unitInStock" class="form-Control" />
+					<form:input path="unitInStock" class="form-Control" value="${product.unitInStock}"/>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="productImage">Upload
@@ -54,6 +56,6 @@
 				<input type="submit" class="btn btn-default" value="submit">
 				<a href='<c:url value="/admin/productInventory"></c:url>'>Cancel</a>
 			</form:form>
-		
+		</div>
 
 		<%@include file="/WEB-INF/view/templates/footer.jsp"%>
