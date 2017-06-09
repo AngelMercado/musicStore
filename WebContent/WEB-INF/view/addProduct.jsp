@@ -12,15 +12,17 @@
 				<div class="form-group">
 					<label for="name">Name</label>
 					<form:input path="productName" id="name" class="form-Control" />
+					<form:errors path="productName" cssStyle="color:red"></form:errors>
 				</div>
 				<div class="form-group">
-					<label for="category">Category</label> <label
-						class="checkbox-inline"> <form:radiobutton
+					<label for="category">Category</label> 
+					<label class="checkbox-inline"> <form:radiobutton
 							path="productCategory" id="category" value="instrument" />
 						Instrument
 					</label> <label class="checkbox-inline"> <form:radiobutton
 							path="productCategory" id="category" value="record" /> Record
-					</label> <label class="checkbox-inline"> <form:radiobutton
+					</label> 
+					<label class="checkbox-inline"> <form:radiobutton
 							path="productCategory" id="category" value="accesory" /> Accesory
 					</label>
 				</div>
@@ -32,6 +34,7 @@
 				<div class="form-group">
 					<label for="price">Price</label>
 					<form:input path="productPrice" id="price" class="form-Control" />
+					<form:errors path="productPrice" cssStyle="color:red"></form:errors>
 				</div>
 				<div class="form-group">
 					<label for="condition">Condition</label> <label
@@ -43,6 +46,7 @@
 				<div class="form-group">
 					<label for="unitInStock">Unit In Stock</label>
 					<form:input path="unitInStock" class="form-Control" />
+					<form:errors path="unitInStock" cssStyle="color:red"></form:errors>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="productImage">Upload

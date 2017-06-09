@@ -61,13 +61,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<c:url value="/" /> ">Le's Music Store</a>
+                    <a class="navbar-brand" href="<c:url value="/" /> ">PrimeTed</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="<c:url value="/" /> ">Home</a></li>
-                        <li><a href="<c:url value="/productList" />">Products</a></li>
-                        <li><a href="<c:url value="/about" />">About</a></li>
+                        <li><a href="<c:url value="/" /> ">Home</a><div class="under-line"></div></li>
+                        <li><a href="<c:url value="/productList" />">Products</a><div class="under-line"></li>
+                        <li><a href="<c:url value="/about" />">About</a><div class="under-line"></li>
                     </ul>
 
                     <ul class="nav navbar-nav pull-right">

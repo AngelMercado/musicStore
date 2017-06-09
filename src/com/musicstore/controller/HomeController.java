@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.tagext.TryCatchFinally;
 import javax.swing.plaf.synth.SynthScrollPaneUI;
 import javax.swing.plaf.synth.SynthSeparatorUI;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -72,7 +74,12 @@ public class HomeController {
 		return "addProduct";
 	}
 	@RequestMapping(value="/admin/productInventory/addProduct", method=RequestMethod.POST)
-	public String addProductPost(@ModelAttribute("product") Product product,HttpServletRequest request){
+	//binding result is before httpServletRequest
+	public String addProductPost(@Valid @ModelAttribute("product") Product product,BindingResult result,HttpServletRequest request){
+		
+		if (result.hasErrors()) {
+			return "addProduct";
+		}
 		MultipartFile productImage = product.getProductImage();
 		System.out.println(productImage.getOriginalFilename());
 		productDao.addProduct(product);

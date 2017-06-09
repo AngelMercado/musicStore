@@ -5,7 +5,8 @@
 		<div class="page-header">
 			<h1>Product Detail</h1>
 			<p>Here the detail information of the product</p>
-			<div class="container">
+		</div>
+		
 				<div class="row">
 					<div class="col-md-5">
 						<img src='<c:url value="/resources/images/${product.productId}.png"/>' alt="image" style="width: 100%; height: 300px">
@@ -21,7 +22,4 @@
 						<h4>${product.productPrice}USD</h4>
 					</div>
 				</div>
-			</div>
-
-		</div>
 		<%@include file="/WEB-INF/view/templates/footer.jsp"%>
