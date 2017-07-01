@@ -6,6 +6,17 @@
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <resources>
+        <resource>
+            <directory>src/</directory>
+            <includes>                      
+                <include>com/primeStore/musicStore/config/*.xml</include>
+            </includes>
+        </resource>
+        <resource>
+            <directory>src/main/resources</directory>
+        </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

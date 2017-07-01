@@ -25,9 +25,9 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-  		<!--classpath:com/group/config/persistence-context.xml-->
+  		classpath:com/primeStore/musicStore/config/persistence-context.xml
+<!--   		classpath:com/primeStore/musicStore/config/service-context.xml -->
   		classpath:com/primeStore/musicStore/config/service-context.xml
-  		<!--classpath:com/group/config/security-context.xml-->
   	</param-value>
   </context-param>
 <!--  <resource-ref>
