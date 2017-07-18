@@ -45,5 +45,5 @@ public class ProductDaoImpl implements ProductDao{
 		session.delete(getProductByID(id));
 		session.flush();
 	}
-
+	
 }

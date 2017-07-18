@@ -1,1 +1,4 @@
 com/primeStore/musicStore/controller/IndexController.class
+com/primeStore/musicStore/dao/ProductDao.class
+com/primeStore/musicStore/domain/Product.class
+com/primeStore/musicStore/dao/ProductDaoImpl.class

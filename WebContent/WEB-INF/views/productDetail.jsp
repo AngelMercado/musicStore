@@ -32,7 +32,7 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-5">
-    					<img src="" style="widht:100%;height:300px;"/>
+                                    <img src='<spring:url value="/res/images/${product.idProduct}.png"></spring:url>' style="widht:100%;height:300px;"/>
     				</div>
     				<div class="col-md-5">
     					<h3>Product Name: ${product.productName}</h3>

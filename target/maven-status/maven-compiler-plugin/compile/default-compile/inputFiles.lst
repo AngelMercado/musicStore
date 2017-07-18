@@ -1,1 +1,4 @@
-/home/angel/workspace/primeMusic/src/com/primeStore/musicStore/controller/IndexController.java
+/home/angel/eclipse-workspace/primeMusic/src/main/java/com/primeStore/musicStore/controller/IndexController.java
+/home/angel/eclipse-workspace/primeMusic/src/main/java/com/primeStore/musicStore/dao/ProductDaoImpl.java
+/home/angel/eclipse-workspace/primeMusic/src/main/java/com/primeStore/musicStore/domain/Product.java
+/home/angel/eclipse-workspace/primeMusic/src/main/java/com/primeStore/musicStore/dao/ProductDao.java
